@@ -8,7 +8,7 @@ semicontinuous high-dimensional data”, by Sabbioni E., Agostinelli C., Farcome
 **Structure of the repository**: The main folder contains the following files:
   - **Results**: folder with the results of the simulation study and of the simulated scenarios that
 mimic the real micro RNA dataset;
-  - **analyzeResults.R**: file used to merge together the results of the different Monte Carlo repetitions of the test on the simulated data;
+  - **analyzeResults.R**: file used to merge together the results of the different Monte Carlo repetitions of the test on the simulated data;
   - **functionsSim.R**: file that contains necessary functions to run the simulation study;
   - **functionSim real.R**: file that contains necessary functions to run the test on the simulated
                             scenarios that mimic the real micro RNA dataset;
@@ -74,6 +74,7 @@ the file "microRNA sim.R". This file requires the packages "semicontMANOVA" and 
 
 **Session info**
 > sessionInfo()
+
 **R** version 4.1.2 (2021-11-01)
 **Platform**: x86_64-pc-linux_gnu(64-bit)
 Running under: CentOS Linux 7 (Core)
