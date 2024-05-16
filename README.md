@@ -54,7 +54,7 @@ computer);
     - model complexity measure under the null hypothesis,
     - Information criteria under no hypothesis $M(\hat{\lambda}, \hat{\pi}, \hat{\mu}, \hat{\Sigma})$,
     - Information criteria under the null hypothesis $M(\hat{\lambda_0}, \hat{\pi_0}, \hat{\mu_0}, \hat{\Sigma_0})$,
-    - test statistic $D^{\hat{\lmabda}, \hat{\lambda}_0}$,
+    - test statistic $D^{\hat{\lambda}, \hat{\lambda}_0}$,
     - p-value of the permutation test,
     - final number of components $p*$,
     - final number of components under $H_0$ (it is equal to $p*$).
