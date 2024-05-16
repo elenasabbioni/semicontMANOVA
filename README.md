@@ -56,11 +56,11 @@ computer);
     - Information criteria under the null hypothesis $M(\hat{\lambda_0}, \hat{\pi_0}, \hat{\mu_0}, \hat{\Sigma_0})$,
     - test statistic $D^{\hat{\lambda}, \hat{\lambda}_0}$,
     - p-value of the permutation test,
-    - final number of components $p*$,
-    - final number of components under $H_0$ (it is equal to $p*$).
+    - final number of components $p^*$,
+    - final number of components under $H_0$ (it is equal to $p^*$).
       
 **Tables ["table1.R"]**: Table 1 shows the proportion of rejections of the simulated study. To
-obtain it, run file "table1.R". Table 2 shows the mean number of components $p*$ and the mean
+obtain it, run file "table1.R". Table 2 shows the mean number of components $p^*$ and the mean
 values of $\hat{\lambda} and $\hat{\lambda_0}$. To obtain it, run file "table2.R". Both the files require package "xtable".
 
 **Real data [microRNA sim.R]**: The real data used for the two applications are confidential and
