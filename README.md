@@ -74,28 +74,48 @@ the file "microRNA sim.R". This file requires the packages "semicontMANOVA" and 
 
 **Session info**
 > sessionInfo()
+>
 > 
 > **R** version 4.1.2 (2021-11-01)
+>
 > **Platform**: x86_64-pc-linux_gnu(64-bit)
+> 
 > Running under: CentOS Linux 7 (Core)
+> 
 > Matrix products: **default**
+> 
 > BLAS: /usr/lib64/libblas.so.3.4.2
+>
 > LAPACK: /usr/lib64/liblapack.so.3.4.2
+>
 > 
 > locale:
+> 
 > [1]  LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C
+>
 > [3]  LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8
+>
 > [5]  LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8
+>
 > [7]  LC_PAPER=en_US.UTF-8       LC_NAME=C
+>
 > [9]  LC_ADDRESS=C               LC_TELEPHONE=C
+>
 > [11] LC_MEASUREMENT=en_US.UTF=8 LC_IDENTIFICATION=C
+>
 > 
 > attached base **packages**:
+>
 > [1] parallel   stats   **graphics**   grDevices   utils   datasets  **methods**
+>
 > [8] base
+>
 > 
 > other attached **packages**:
+>
 > [1] semicontMANOVA 0.1-4
+>
 > 
 > loaded via a namespace (and not attached) :
+>
 > [1] compiler_4.1.2   mvtnorm_1.1-3   matrixcalc_1.0-6
