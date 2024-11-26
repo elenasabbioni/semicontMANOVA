@@ -5,23 +5,25 @@ semicontinuous high-dimensional data”, by Sabbioni E., Agostinelli C., Farcome
 **Corresponding author**: Elena Sabbioni, elena.sabbioni@polito.it
 
 
-**Structure of the repository**: The main folder contains the following files:
-  - **Results**: folder with the results of the simulation study and of the simulated scenarios that
-mimic the real micro RNA dataset;
-  - **analyzeResults.R**: file used to merge together the results of the different Monte Carlo repetitions of the test on the simulated data;
-  - **functionsSim.R**: file that contains necessary functions to run the simulation study;
-  - **functionSim real.R**: file that contains necessary functions to run the test on the simulated
-                            scenarios that mimic the real micro RNA dataset;
-  - **main.R**: main file that performs the simulation study;
-  - **microRNA_sim.R**: file used to perform the test on the simulated scenarios that mimic the real
-                        micro RNA dataset;
+**Structure of the repository**: The main folder Replicability contains the following files:
+  - **Results_CHEN**: folder with the results of the simulation study using the method described by Chen et al.;
+  - **Results_semicontinuousMANOVA**: folder with the results of the simulation study and of a simulated scenarios that mimic the real micro RNA dataset, when using the regularized MANOVA test;
+  - **analyzeResults_CHEN.R**: file used to merge together the results of the different Monte Carlo repetitions obtained using Chen et al. approach on the simulated data;
+  - **analyzeResults_semicontinuousMANOVA.R**: file used to merge together the results of the different Monte Carlo repetitions obtained using the regularized MANOVA test on the simulated data;
+  - **functionsSim.R**: file that contains necessary functions to run the simulation study for the regularized MANOVA test;
+  - **functionsSim_CHEN.R**: file that contains necessary functions to run the simulation study for the test of Chen et al.;
+  - **functionSim_real.R**: file that contains necessary functions to run the test on the simulated scenarios that mimic the real microRNA dataset;
+  - **main CHEN.R**: main file that performs the simulation study for the test by Chen et al.;
+  - **main_semicontinuousMANOVA.R**: main file that performs the simulation study for the regularized MANOVA test;
+  - **microRNA_sim.R**: file used to perform the regularized MANOVA test on the simulated scenarios that mimic the real microRNA dataset;
   - **microRNA_sim.RData**: it contains the sample parameters of the real micro RNA dataset;
-  - **semicontMANOVA_0.1-4.tar-gz**: semicontMANOVA package, available also on CRAN (https://cran.r-project.org/web/packages/semicontMANOVA/index.html);
-  - **table1.R**: file used to produce Table 1 of the manuscript;
-  - **table2.R**: file used to produce Table 2 of the manuscript.
+  - **semicontMANOVA_0.2.tar-gz**: semicontMANOVA package;
+  - **table1-2-3.R**: file used to produce Table 1, 2, 3 of the manuscript;
+  - **table4.R**: file used to produce Table 4 of the manuscript;
+  - **table5-6.R**: file used to produce Table 5 and 6 of the manuscript;
 
-    
-**Simulation study ["main.R"]**: The results of the simulation study can be reproduced running
+    DA QUI
+**Simulation study ["main_semicontinuousMANOVA.R", "main_CHEN.R"]**: The results of the simulation study can be reproduced running
 the file "main.R". The directory is automatically set to the current working directory. The necessary
 packages are "semicontMANOVA" (available for the installation as tar.gz file in the ”Replicability”
 folder) and "parallel". This file load automatically also the necessary functions for the simulation
