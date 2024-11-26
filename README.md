@@ -22,102 +22,68 @@ semicontinuous high-dimensional data”, by Sabbioni E., Agostinelli C., Farcome
   - **table4.R**: file used to produce Table 4 of the manuscript;
   - **table5-6.R**: file used to produce Table 5 and 6 of the manuscript;
 
-    DA QUI
-**Simulation study ["main_semicontinuousMANOVA.R", "main_CHEN.R"]**: The results of the simulation study can be reproduced running
-the file "main.R". The directory is automatically set to the current working directory. The necessary
-packages are "semicontMANOVA" (available for the installation as tar.gz file in the ”Replicability”
-folder) and "parallel". This file load automatically also the necessary functions for the simulation
-("functionSim.R").
-The simulations were run in parallel on a cluster to reduce the time. It is possible to set the
-number of available cpus through the parameters ncpus and mc.cores. If there is no possibility to
-parallelize the code, set ncpus = 1 and mc.cores = 1.
-The output of the simulation study is stored in a new folder, called "Results". Different folders
-are created in it:
-  - H0: storing the results for the simulations under the null hypothesis;
-  - H1_1−1: storing the results for the simulations under the alternative hypothesis with c1 = 1,
-            c2 = 0;
-  - H1_1−5: storing the results for the simulations under the alternative hypothesis with c1 = 5,
-            c2 = 0;
-  - H1_2−0.15: storing the results for the simulations under the alternative hypothesis with
-               c1 = 0, c2 = 0.15;
-  - H1_2−0.3 : storing the results for the simulations under the alternative hypothesis with
-               c1 = 0, c2 = 0.30;
-In each of these folders, there are different files for the different scenarios of n, p, πj1 and ρ that
-have been explored. Each file contains a row for each Monte Carlo repetition, storing:
+**Simulation study ["main_semicontinuousMANOVA.R", "main_CHEN.R"]**: The results of the simulation study using the regularized MANOVA test can be reproduced running the file "main semicontinuousMANOVA.R", while the results of the method described by Chen et al. can be obtained running main CHEN.R". The directory is automatically set to the current working directory. The necessary packages are "semicontMANOVA" (available for the installation as tar.gz file in the ”Replicability” folder) and "parallel". This file load automatically also the necessary functions for the simulation ("functionSim.R" and "functionSim CHEN.R" respectively).
+The simulations were run in parallel on a cluster to reduce the time. It is possible to set the number of available cpus through the parameters ncpus and mc.cores. If there is no possibility to parallelize the code, set ncpus = 1 and mc.cores = 1.
+The output of the simulation study is stored in new folders, called "Results semicontinuousMANOVA" and "Results CHEN" respectively. In the first folder we have two subfolders, K2, with the results obtained when comparing two groups, and K4, when we analize 4 groups. In the Results CHEN we find just the subfolder K2, since this approach can be applied just when comparing two different groups. In each of these subfolders, we find other folders:
+  - **H0**: storing the results for the simulations under the null hypothesis;
+  - **H1_1−1**: storing the results for the simulations under the alternative hypothesis with c1 = 1, c2 = 0;
+  - **H1_1−5**: storing the results for the simulations under the alternative hypothesis with c1 = 5, c2 = 0;
+  - **H1_2−0.15**: storing the results for the simulations under the alternative hypothesis with c1 = 0, c2 = 0.15;
+  - **H1_2−0.3**: storing the results for the simulations under the alternative hypothesis with c1 = 0, c2 = 0.30.
+
+In each of these folders, there are different files for the different scenarios of $n$, $p$, $\pi_j$, and $\rho$ that have been explored. For the regularized MANOVA results, each file contains a row for each Monte
+Carlo repetition, storing:
   - the index of the repetition (used to set the seed);
-  - the time taken to run the test (5 entrances, it can be different if the code runs on a different
-computer);
+  - the time taken to run the test (5 entrances, it can be different if the code runs on a different computer);
   - results of the test:
-    - log-likelihood under no hypothesis $l^λ$,
-    - log-likelihood under the null hypothesis $l^{λ_0}$,
-    - selected value of regularization parameter under no hypothesis $\hat{\lambda}$,
-    - selected value of regularization parameter under the null hypothesis $\hat{\lambda_0}$,
-    - model complexity measure under no hypothesis,
-    - model complexity measure under the null hypothesis,
-    - Information criteria under no hypothesis $M(\hat{\lambda}, \hat{\pi}, \hat{\mu}, \hat{\Sigma})$,
-    - Information criteria under the null hypothesis $M(\hat{\lambda_0}, \hat{\pi_0}, \hat{\mu_0}, \hat{\Sigma_0})$,
-    - test statistic $D^{\hat{\lambda}, \hat{\lambda}_0}$,
-    - p-value of the permutation test,
-    - final number of components $p^*$,
-    - final number of components under $H_0$ (it is equal to $p^*$).
+    – log-likelihood under no hypothesis $ell^\lambda$;
+    – log-likelihood under the null hypothesis $ell_0^{\lambda_0}$;
+    – selected value of regularization parameter under no hypothesis $\hat{\lambda}$;
+    – selected value of regularization parameter under the null hypothesis $\hat{\lambda}_0$;
+    – model complexity measure under no hypothesis;
+    – model complexity measure under the null hypothesis;
+    – Information criteria under no hypothesis $M(\hat{\lambda}, \hat{\pi}, \hat{\boldsymbol{\mu}}, \hat{\Sigma})$;
+    – Information criteria under the null hypothesis  $M(\hat{\lambda}_0, \hat{\pi}_0, \hat{\boldsymbol{\mu}}_0, \hat{\Sigma}_0)$;
+    – test statistic $D^{\hat{\lambda}, \hat{\lambda}_0}$;
+    – p-value of the permutation test;
+    – final number of components $p^*$;
+    – final number of components under H0 (it is equal to $p^*$).
+    
+On the other hand, for the results by Chen et al., each file contains a row for each Monte Carlo repetition, storing:
+  - the index of the repetition (used to set the seed);
+  - p-value of the permutation test.
+
       
-**Tables ["table1.R"]**: Table 1 shows the proportion of rejections of the simulated study. To
-obtain it, run file "table1.R". Table 2 shows the mean number of components $p^*$ and the mean
-values of $\hat{\lambda} and $\hat{\lambda_0}$. To obtain it, run file "table2.R". Both the files require package "xtable".
+**Tables** ["table1-2-3.R", "table4.R", "table5-6.R"]: Table 1, 2, 3 show the proportion of rejections of the simulated study when $K = 2$, comparing the results of the regularized MANOVA and of the method proposed by Chen et al. To obtain it, run file "table1-2-3.R". Table 4 shows
+the proportion of rejections of the regularized MANOVA on the simulated study when K = 4. To obtain it, run file "table4.R". Table 5 and 6 show the mean number of components $p^*$ and the mean values of $\hat{\lambda}$ and  $\hat{\lambda}_0$ when applying the regularized MANOVA, with $K = 2$ and $K = 4$ respectively. To obtain it, run file "table5-6.R". All the files require package "xtable".
 
-**Real data [microRNA sim.R]**: The real data used for the two applications are confidential and
-can not be shared. Hence we have simulated two scenarios based on the real dataset with RNA
-differential expression in blastocyst cultures. The sample mean, the sample variance and covariance
-matrix and the probability of a missing values of the real dataset, both under the null hypothesis
-and under the alternative hypothesis, are contained in "microRNA sim.RData". These scenarios
-are described in Section 3 of the manuscript and the test in these cases can be obtained running
-the file "microRNA sim.R". This file requires the packages "semicontMANOVA" and "parallel".
-
+**Real data** ["microRNA sim.R"]: The real data used for the two applications are confidential and can not be shared. Hence we have simulated two scenarios based on the real dataset with RNA differential expression in blastocyst cultures. The sample mean, the sample variance and covariance matrix and the probability of a missing values of the real dataset, both under the null hypothesis and under the alternative hypothesis, are contained in "microRNA sim.RData". These scenarios
+are described in Section 3 of the manuscript and the test in these cases can be obtained running the file "microRNA sim.R". This file requires the packages "semicontMANOVA" and "parallel".
 
 **Session info**
-> sessionInfo()
->
-> 
-> **R** version 4.1.2 (2021-11-01)
->
-> **Platform**: x86_64-pc-linux_gnu(64-bit)
-> 
-> Running under: CentOS Linux 7 (Core)
-> 
-> Matrix products: **default**
-> 
-> BLAS: /usr/lib64/libblas.so.3.4.2
->
-> LAPACK: /usr/lib64/liblapack.so.3.4.2
->
-> 
-> locale:
-> 
-> [1]  LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C
->
-> [3]  LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8
->
-> [5]  LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8
->
-> [7]  LC_PAPER=en_US.UTF-8       LC_NAME=C
->
-> [9]  LC_ADDRESS=C               LC_TELEPHONE=C
->
-> [11] LC_MEASUREMENT=en_US.UTF=8 LC_IDENTIFICATION=C
->
-> 
-> attached base **packages**:
->
-> [1] parallel   stats   **graphics**   grDevices   utils   datasets  **methods**
->
-> [8] base
->
-> 
-> other attached **packages**:
->
-> [1] semicontMANOVA 0.1-4
->
-> 
-> loaded via a namespace (and not attached) :
->
-> [1] compiler_4.1.2   mvtnorm_1.1-3   matrixcalc_1.0-6
+
+>       sessionInfo( )
+**R** version 4.1.2 (2021-11-01)
+**Platform**: x86_64-pc-linux-gnu (64-bit)
+Running under: CentOS Linux 7 (Core)
+Matrix products: **default**
+BLAS:     /usr/lib64/libblas.so.3.4.2
+LAPACK:   /usr/lib64/liblapack.so.3.4.2
+
+locale:
+[1]   LC_CTYPE=en_US.UTF-8          LC_NUMERIC=C
+[3]   LC_TIME=en_US.UTF-8           LC_COLLATE=en_US.UTF-8
+[5]   LC_MONETARY=en_US.UTF-8       LC_MESSAGES=en_US.UTF-8
+[7]   LC_PAPER=en_US.UTF-8          LC_NAME=C
+[9]   LC_ADDRESS=C                  LC_TELEPHONE=C
+[11]  LC_MEASUREMENT=en_US.UTF-8    LC_IDENTIFICATION=C
+
+attached base packages:
+[1] parallel    stats    graphics    grDevices    utils    datasets    methods
+[8] base
+
+other attached packages:
+[1] semicontMANOVA_0.2
+
+loaded via a namespace (and not attached):
+[1] compiler_4.1.2    mvtnorm_1.1-3    matrixcalc_1.0-6
