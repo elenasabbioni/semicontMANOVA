@@ -87,7 +87,7 @@ are described in Section 3 of the manuscript and the test in these cases can be 
 > 
 >       Matrix products: default
 > 
-        BLAS:     /usr/lib64/libblas.so.3.4.2
+>       BLAS:     /usr/lib64/libblas.so.3.4.2
 > 
 >       LAPACK:   /usr/lib64/liblapack.so.3.4.2
 >
