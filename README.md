@@ -79,45 +79,45 @@ are described in Section 3 of the manuscript and the test in these cases can be 
 
 >       sessionInfo( )
 > 
->       **R** version 4.1.2 (2021-11-01)
+>       R version 4.1.2 (2021-11-01)
 > 
->       **Platform**: x86_64-pc-linux-gnu (64-bit)
+>       Platform: x86_64-pc-linux-gnu (64-bit)
 > 
->  Running under: CentOS Linux 7 (Core)
+>       Running under: CentOS Linux 7 (Core)
 > 
->  Matrix products: **default**
+>       Matrix products: default
 > 
->  BLAS:     /usr/lib64/libblas.so.3.4.2
+        BLAS:     /usr/lib64/libblas.so.3.4.2
 > 
->  LAPACK:   /usr/lib64/liblapack.so.3.4.2
+>       LAPACK:   /usr/lib64/liblapack.so.3.4.2
 >
 > 
->  locale:
+>       locale:
 > 
->  [1]   LC_CTYPE=en_US.UTF-8          LC_NUMERIC=C
+>       [1]   LC_CTYPE=en_US.UTF-8          LC_NUMERIC=C
 > 
->  [3]   LC_TIME=en_US.UTF-8           LC_COLLATE=en_US.UTF-8
+>       [3]   LC_TIME=en_US.UTF-8           LC_COLLATE=en_US.UTF-8
 > 
->  [5]   LC_MONETARY=en_US.UTF-8       LC_MESSAGES=en_US.UTF-8
+>       [5]   LC_MONETARY=en_US.UTF-8       LC_MESSAGES=en_US.UTF-8
 > 
->  [7]   LC_PAPER=en_US.UTF-8          LC_NAME=C
+>       [7]   LC_PAPER=en_US.UTF-8          LC_NAME=C
 > 
->  [9]   LC_ADDRESS=C                  LC_TELEPHONE=C
+>       [9]   LC_ADDRESS=C                  LC_TELEPHONE=C
 > 
->  [11]  LC_MEASUREMENT=en_US.UTF-8    LC_IDENTIFICATION=C
-> 
->  
->  attached base packages:
-> 
->  [1] parallel    stats    graphics    grDevices    utils    datasets    methods
-> 
->  [8] base
+>       [11]  LC_MEASUREMENT=en_US.UTF-8    LC_IDENTIFICATION=C
 > 
 >  
->  other attached packages:
+>       attached base packages:
 > 
->  [1] semicontMANOVA_0.2
+>       [1] parallel    stats    graphics    grDevices    utils    datasets    methods
+> 
+>       [8] base
+> 
 >  
->  loaded via a namespace (and not attached):
+>       other attached packages:
 > 
->  [1] compiler_4.1.2    mvtnorm_1.1-3    matrixcalc_1.0-6
+>       [1] semicontMANOVA_0.2
+>  
+>       loaded via a namespace (and not attached):
+> 
+>       [1] compiler_4.1.2    mvtnorm_1.1-3    matrixcalc_1.0-6
