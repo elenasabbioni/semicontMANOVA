@@ -79,9 +79,9 @@ are described in Section 3 of the manuscript and the test in these cases can be 
 
 >       sessionInfo( )
 > 
->  **R** version 4.1.2 (2021-11-01)
+>       **R** version 4.1.2 (2021-11-01)
 > 
->  **Platform**: x86_64-pc-linux-gnu (64-bit)
+>       **Platform**: x86_64-pc-linux-gnu (64-bit)
 > 
 >  Running under: CentOS Linux 7 (Core)
 > 
