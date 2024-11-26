@@ -22,22 +22,21 @@ semicontinuous high-dimensional data”, by Sabbioni E., Agostinelli C., Farcome
   - **table4.R**: file used to produce Table 4 of the manuscript;
   - **table5-6.R**: file used to produce Table 5 and 6 of the manuscript;
 
-**Simulation study ["main_semicontinuousMANOVA.R", "main_CHEN.R"]**: The results of the simulation study using the regularized MANOVA test can be reproduced running the file "main semicontinuousMANOVA.R", while the results of the method described by Chen et al. can be obtained running main CHEN.R". The directory is automatically set to the current working directory. The necessary packages are "semicontMANOVA" (available for the installation as tar.gz file in the ”Replicability” folder) and "parallel". This file load automatically also the necessary functions for the simulation ("functionSim.R" and "functionSim CHEN.R" respectively).
-The simulations were run in parallel on a cluster to reduce the time. It is possible to set the number of available cpus through the parameters ncpus and mc.cores. If there is no possibility to parallelize the code, set ncpus = 1 and mc.cores = 1.
+**Simulation study ["main_semicontinuousMANOVA.R", "main_CHEN.R"]**: The results of the simulation study using the regularized MANOVA test can be reproduced running the file "main semicontinuousMANOVA.R", while the results of the method described by Chen et al. can be obtained running main CHEN.R". The directory is automatically set to the current working directory. The necessary packages are "semicontMANOVA" (available for the installation as tar.gz file in the ”Replicability” folder) and "parallel". This file load automatically also the necessary functions for the simulation ("functionSim.R" and "functionSim CHEN.R" respectively).
+The simulations were run in parallel on a cluster to reduce the time. It is possible to set the number of available cpus through the parameters ncpus and mc.cores. If there is no possibility to parallelize the code, set \texttt{ncpus = 1} and \texttt{mc.cores = 1}.
 The output of the simulation study is stored in new folders, called "Results semicontinuousMANOVA" and "Results CHEN" respectively. In the first folder we have two subfolders, K2, with the results obtained when comparing two groups, and K4, when we analize 4 groups. In the Results CHEN we find just the subfolder K2, since this approach can be applied just when comparing two different groups. In each of these subfolders, we find other folders:
   - **H0**: storing the results for the simulations under the null hypothesis;
-  - **H1_1−1**: storing the results for the simulations under the alternative hypothesis with c1 = 1, c2 = 0;
-  - **H1_1−5**: storing the results for the simulations under the alternative hypothesis with c1 = 5, c2 = 0;
-  - **H1_2−0.15**: storing the results for the simulations under the alternative hypothesis with c1 = 0, c2 = 0.15;
-  - **H1_2−0.3**: storing the results for the simulations under the alternative hypothesis with c1 = 0, c2 = 0.30.
+  - **H1_1−1**: storing the results for the simulations under the alternative hypothesis with $c_1 = 1, c_2 = 0$;
+  - **H1_1−5**: storing the results for the simulations under the alternative hypothesis with $c_1 = 5, c_2 = 0$;
+  - **H1_2−0.15**: storing the results for the simulations under the alternative hypothesis with $c_1 = 0, c_2 = 0.15$;
+  - **H1_2−0.3**: storing the results for the simulations under the alternative hypothesis with $c_1 = 0, c_2 = 0.30$.
 
-In each of these folders, there are different files for the different scenarios of $n$, $p$, $\pi_j$, and $\rho$ that have been explored. For the regularized MANOVA results, each file contains a row for each Monte
-Carlo repetition, storing:
+In each of these folders, there are different files for the different scenarios of $n$, $p$, $\pi_j$, and $\rho$ that have been explored. For the regularized MANOVA results, each file contains a row for each Monte Carlo repetition, storing:
   - the index of the repetition (used to set the seed);
   - the time taken to run the test (5 entrances, it can be different if the code runs on a different computer);
   - results of the test:
-    – log-likelihood under no hypothesis $ell^\lambda$;
-    – log-likelihood under the null hypothesis $ell_0^{\lambda_0}$;
+    – log-likelihood under no hypothesis $l^\lambda$;
+    – log-likelihood under the null hypothesis $l_0^{\lambda_0}$;
     – selected value of regularization parameter under no hypothesis $\hat{\lambda}$;
     – selected value of regularization parameter under the null hypothesis $\hat{\lambda}_0$;
     – model complexity measure under no hypothesis;
@@ -46,8 +45,8 @@ Carlo repetition, storing:
     – Information criteria under the null hypothesis  $M(\hat{\lambda}_0, \hat{\pi}_0, \hat{\boldsymbol{\mu}}_0, \hat{\Sigma}_0)$;
     – test statistic $D^{\hat{\lambda}, \hat{\lambda}_0}$;
     – p-value of the permutation test;
-    – final number of components $p^*$;
-    – final number of components under H0 (it is equal to $p^*$).
+    – final number of components $p\*$;
+    – final number of components under H0 (it is equal to $p\*$).
     
 On the other hand, for the results by Chen et al., each file contains a row for each Monte Carlo repetition, storing:
   - the index of the repetition (used to set the seed);
